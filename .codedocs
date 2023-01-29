@@ -31,9 +31,9 @@ TAGLINKS =
 #---------------------------------------------------------------------------
 
 # These variables have to be redefined since codedocs cannot run CMake
-PROJECT_NAME = "Project Name"
+PROJECT_NAME = "Clearning"
 PROJECT_NUMBER = 0.1.0
-PROJECT_BRIEF = "A cross-platform C++14 project template"
+PROJECT_BRIEF = "Clearning"
 OUTPUT_DIRECTORY = doc/
 INPUT = doc/ include/
 USE_MDFILE_AS_MAINPAGE = doc/main_page.md

@@ -1,14 +1,14 @@
 cmake_minimum_required(VERSION 3.1)
 
-project(Project-Name)
+project(CLearning)
 
-set(Project-Name_VERSION_MAJOR 0)
-set(Project-Name_VERSION_MINOR 1)
-set(Project-Name_VERSION_PATCH 0)
-set(Project-Name_VERSION "${Project-Name_VERSION_MAJOR}.${Project-Name_VERSION_MINOR}.${Project-Name_VERSION_PATCH}")
+set(Clearning_VERSION_MAJOR 0)
+set(Clearning_VERSION_MINOR 1)
+set(Clearning_VERSION_PATCH 0)
+set(Clearning_VERSION "${Clearning_VERSION_MAJOR}.${Clearning_VERSION_MINOR}.${Clearning_VERSION_PATCH}")
 
-set(PROJ_NAME "\"Project Name\"") # PROJECT_NAME is a predefined variable
-set(PROJECT_DESCRIPTION "\"A cross-platform C++14 project template\"")
+set(PROJ_NAME "\"Clearning\"") # PROJECT_NAME is a predefined variable
+set(PROJECT_DESCRIPTION "Clearning")
 
 configure_file(include/project-abbr/config.hpp.in
     ${CMAKE_BINARY_DIR}/include/project-abbr/config.hpp
@@ -57,12 +57,12 @@ set(LIBRARY_SOURCES
     src/hello_world.cpp
 )
 
-add_library(Project-Name-lib ${LIBRARY_SOURCES}) # A library
-set_target_properties(Project-Name-lib PROPERTIES PREFIX "") # Remove the lib prefix
-target_include_directories(Project-Name-lib PUBLIC ${CMAKE_SOURCE_DIR}/include ${CMAKE_BINARY_DIR}/include)
+add_library(Clearning-lib ${LIBRARY_SOURCES}) # A library
+set_target_properties(Clearning-lib PROPERTIES PREFIX "") # Remove the lib prefix
+target_include_directories(Clearning-lib PUBLIC ${CMAKE_SOURCE_DIR}/include ${CMAKE_BINARY_DIR}/include)
 
-add_executable(Project-Name src/main.cpp) # The main executable
-target_link_libraries(Project-Name Project-Name-lib) # Link our sources to the executable
+add_executable(Clearning src/main.cpp) # The main executable
+target_link_libraries(Clearning Clearning-lib) # Link our sources to the executable
 
 if (BUILD_TESTS)
     include(CTest)
@@ -75,8 +75,8 @@ if (GEN_DOCS)
 endif (GEN_DOCS)
 
 # Install the built library and executable into the appropriate directory
-install(TARGETS Project-Name DESTINATION bin)
-install(TARGETS Project-Name-lib
+install(TARGETS Clearning DESTINATION bin)
+install(TARGETS Clearning-lib
     ARCHIVE DESTINATION lib
     LIBRARY DESTINATION lib
     RUNTIME DESTINATION bin
@@ -84,7 +84,7 @@ install(TARGETS Project-Name-lib
 
 # Install the project header files into the appropriate directory
 install(DIRECTORY include/ DESTINATION include PATTERN "config.hpp.in" EXCLUDE) # Install our main header files
-install(FILES ${CMAKE_BINARY_DIR}/include/project-abbr/config.hpp DESTINATION include/project-abbr) # Install our configuration file
+install(FILES ${CMAKE_BINARY_DIR}/include/${PROJ_NAME}/config.hpp DESTINATION include/${PROJ_NAME}) # Install our configuration file
 
 # Install the project's extra files
-install(FILES README.md LICENSE DESTINATION share/project-abbr)
+install(FILES README.md LICENSE DESTINATION share/${PROJ_NAME})
