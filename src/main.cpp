@@ -1,6 +1,6 @@
-#include <project-abbr/config.hpp>
-#include <project-abbr/factorial.hpp>
-#include <project-abbr/hello_world.hpp>
+#include <Clearning/config.hpp>
+#include <Clearning/factorial.hpp>
+#include <Clearning/hello_world.hpp>
 
 #include <iostream>
 #include <string>
