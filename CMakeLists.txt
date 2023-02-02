@@ -38,7 +38,7 @@ if (ENABLE_COVERAGE AND NOT CMAKE_CONFIGURATION_TYPES)
     include(CodeCoverage)
     
     append_coverage_compiler_flags()
-    set(COVERAGE_EXCLUDES "/usr/include/\\*;${CMAKE_SOURCE_DIR}/src/main.cpp;${CMAKE_SOURCE_DIR}/test/*;${CMAKE_SOURCE_DIR}/third_party/doctest/*")
+    set(COVERAGE_EXCLUDES "/usr/include/\\*;${CMAKE_SOURCE_DIR}/src/main.c;${CMAKE_SOURCE_DIR}/test/*;${CMAKE_SOURCE_DIR}/third_party/doctest/*")
     
     setup_target_for_coverage(NAME coverage EXECUTABLE ctest DEPENDENCIES coverage)
 else (ENABLE_COVERAGE AND NOT CMAKE_CONFIGURATION_TYPES)
@@ -53,15 +53,15 @@ else (ENABLE_COVERAGE AND NOT CMAKE_CONFIGURATION_TYPES)
 endif (ENABLE_COVERAGE AND NOT CMAKE_CONFIGURATION_TYPES)
 
 set(LIBRARY_SOURCES
-    src/factorial.cpp
-    src/hello_world.cpp
+    src/factorial.c
+    src/hello_world.c
 )
 
 add_library(Clearning-lib ${LIBRARY_SOURCES}) # A library
 set_target_properties(Clearning-lib PROPERTIES PREFIX "") # Remove the lib prefix
 target_include_directories(Clearning-lib PUBLIC ${CMAKE_SOURCE_DIR}/include ${CMAKE_BINARY_DIR}/include)
 
-add_executable(Clearning src/main.cpp) # The main executable
+add_executable(Clearning src/main.c) # The main executable
 target_link_libraries(Clearning Clearning-lib) # Link our sources to the executable
 
 if (BUILD_TESTS)

@@ -1331,7 +1331,7 @@ namespace detail
         operator bool() { return !m_passed; }
 
         // clang-format off
-        // forbidding some expressions based on this table: http://en.cppreference.com/w/cpp/language/operator_precedence
+        // forbidding some expressions based on this table: http://en.creference.com/w/cpp/language/operator_precedence
         template <typename R> Result& operator&  (const R&) { DOCTEST_STATIC_ASSERT(deferred_false<R>::value, Expression_Too_Complex_Please_Rewrite_As_Binary_Comparison); return *this; }
         template <typename R> Result& operator^  (const R&) { DOCTEST_STATIC_ASSERT(deferred_false<R>::value, Expression_Too_Complex_Please_Rewrite_As_Binary_Comparison); return *this; }
         template <typename R> Result& operator|  (const R&) { DOCTEST_STATIC_ASSERT(deferred_false<R>::value, Expression_Too_Complex_Please_Rewrite_As_Binary_Comparison); return *this; }
@@ -1470,7 +1470,7 @@ namespace detail
         DOCTEST_DO_BINARY_EXPRESSION_COMPARISON(<=, " <= ", DOCTEST_CMP_LE) //!OCLINT bitwise operator in conditional
         // clang-format on
 
-        // forbidding some expressions based on this table: http://en.cppreference.com/w/cpp/language/operator_precedence
+        // forbidding some expressions based on this table: http://en.creference.com/w/cpp/language/operator_precedence
         DOCTEST_FORBIT_EXPRESSION(&)
         DOCTEST_FORBIT_EXPRESSION (^)
         DOCTEST_FORBIT_EXPRESSION(|)

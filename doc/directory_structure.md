@@ -19,14 +19,14 @@ Ignoring all extraneous files, this is the structure that this project uses:
     │       ├── factorial.hpp
     │       └── hello_world.hpp
     ├── src/
-    │   ├── factorial.cpp
-    │   ├── hello_world.cpp
-    │   └── main.cpp
+    │   ├── factorial.c
+    │   ├── hello_world.c
+    │   └── main.c
     ├── test/
     │   ├── CMakeLists.txt
-    │   ├── factorial_test.cpp
-    │   ├── hello_world_test.cpp
-    │   └── test_runner.cpp
+    │   ├── factorial_test.c
+    │   ├── hello_world_test.c
+    │   └── test_runner.c
     └── third_party/
         └── doctest/
             └── doctest.h
