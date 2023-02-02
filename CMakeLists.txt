@@ -10,8 +10,8 @@ set(Clearning_VERSION "${Clearning_VERSION_MAJOR}.${Clearning_VERSION_MINOR}.${C
 set(PROJ_NAME "\"Clearning\"") # PROJECT_NAME is a predefined variable
 set(PROJECT_DESCRIPTION "Clearning")
 
-configure_file(include/project-abbr/config.hpp.in
-    ${CMAKE_BINARY_DIR}/include/project-abbr/config.hpp
+configure_file(include/Clearning/config.hpp.in
+	${CMAKE_BINARY_DIR}/include/Clearning/config.hpp
 )
 
 set(CMAKE_CXX_STANDARD 14)
