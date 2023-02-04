@@ -10,8 +10,8 @@ set(Clearning_VERSION "${Clearning_VERSION_MAJOR}.${Clearning_VERSION_MINOR}.${C
 set(PROJ_NAME "\"Clearning\"") # PROJECT_NAME is a predefined variable
 set(PROJECT_DESCRIPTION "Clearning")
 
-configure_file(include/Clearning/config.hpp.in
-	${CMAKE_BINARY_DIR}/include/Clearning/config.hpp
+configure_file(include/Clearning/config.h.in
+	${CMAKE_BINARY_DIR}/include/Clearning/config.h
 )
 
 set(CMAKE_CXX_STANDARD 14)
@@ -83,8 +83,8 @@ install(TARGETS Clearning-lib
 )
 
 # Install the project header files into the appropriate directory
-install(DIRECTORY include/ DESTINATION include PATTERN "config.hpp.in" EXCLUDE) # Install our main header files
-install(FILES ${CMAKE_BINARY_DIR}/include/${PROJ_NAME}/config.hpp DESTINATION include/${PROJ_NAME}) # Install our configuration file
+install(DIRECTORY include/ DESTINATION include PATTERN "config.h.in" EXCLUDE) # Install our main header files
+install(FILES ${CMAKE_BINARY_DIR}/include/${PROJ_NAME}/config.h DESTINATION include/${PROJ_NAME}) # Install our configuration file
 
 # Install the project's extra files
 install(FILES README.md LICENSE DESTINATION share/${PROJ_NAME})

@@ -1,4 +1,4 @@
-#include <Clearning/factorial.hpp>
+#include <Clearning/factorial.h>
 
 int factorial(int number)
 {

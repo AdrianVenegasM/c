@@ -1,23 +1,17 @@
-#include <Clearning/hello_world.hpp>
+#include <Clearning/hello_world.h>
 
-HelloWorld::HelloWorld() :
-    hello_{ "Hello" },
-    world_{ "World" }
+
+char* hello()
 {
+    return "hello";
 }
 
-const std::string& HelloWorld::hello() const
+char* world()
 {
-    return hello_;
+    return "wrold";
 }
 
-const std::string& HelloWorld::world() const
+int generateRandomNumber()
 {
-    return world_;
-}
-
-int HelloWorld::generateRandomNumber() const
-{
-    // Completely random, no bias
-    return 4'000; // <-- Also uses C++14 digit separators
+    return 4000;
 }

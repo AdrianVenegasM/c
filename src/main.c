@@ -1,24 +1,24 @@
-#include <Clearning/config.hpp>
-#include <Clearning/factorial.hpp>
-#include <Clearning/hello_world.hpp>
+#include <Clearning/config.h>
+#include <Clearning/factorial.h>
+#include <Clearning/hello_world.h>
+#include <string.h>
+#include <stdio.h>
 
-#include <iostream>
-#include <string>
 
 int main(int argc, char* argv[])
 {
-    HelloWorld helloWorld;
     
-    if (argc == 2 && std::string{ argv[1] } == "--version")
+    if (argc == 2 && strcmp(argv[1],"--version"))
     {
-        std::cout << "Project Name version " << VERSION << "\n";
-        std::cout << "Copyright information here\n";
-        std::cout << "More copyright details.\n\n";
+        printf("Project Name version %s\n",VERSION);
+        printf("Copyright information here\n");
+        printf("More copyright details.\n\n");
     }
     else
     {
-        std::cout << helloWorld.hello() << ", " << helloWorld.world() << "!\n";
-        std::cout << "Random number = " << helloWorld.generateRandomNumber() << "\n";
-        std::cout << "Factorial(5) = " << factorial(5) << "\n";
+        printf("%s, %s\n", hello(), world());
+        printf("%d\n",generateRandomNumber());
+        printf("%d\n", factorial(5));
     }
+    return 0;
 }
