@@ -28,8 +28,6 @@ Ignoring all extraneous files, this is the structure that this project uses:
     │   ├── hello_world_test.c
     │   └── test_runner.c
     └── third_party/
-        └── doctest/
-            └── doctest.h
 
 This may all look very complex, but here is an explanation of all of the directories:
 
