@@ -7,7 +7,7 @@ set(Clearning_VERSION_MINOR 1)
 set(Clearning_VERSION_PATCH 0)
 set(Clearning_VERSION "${Clearning_VERSION_MAJOR}.${Clearning_VERSION_MINOR}.${Clearning_VERSION_PATCH}")
 
-set(PROJ_NAME "\"Clearning\"") # PROJECT_NAME is a predefined variable
+set(PROJ_NAME "Clearning") # PROJECT_NAME is a predefined variable
 set(PROJECT_DESCRIPTION "Clearning")
 
 configure_file(include/Clearning/config.h.in
