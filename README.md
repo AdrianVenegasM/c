@@ -48,7 +48,7 @@ In order to use this project, all you have to do is follow a few (Ok, more than 
     8. Change the name `Project-Name` and `Project-Name-lib` to match your project name.
     9. Change:
        ```
-       install(FILES ${CMAKE_BINARY_DIR}/include/project-abbr/config.hpp DESTINATION include/project-abbr) # Install our configuration file
+       install(FILES ${CMAKE_BINARY_DIR}/include/project-abbr/config.h DESTINATION include/project-abbr) # Install our configuration file
        ```
        to match the new folder name for your project, as described in step 8.
 5. Modify `LICENSE` to match your software license.
@@ -57,7 +57,7 @@ In order to use this project, all you have to do is follow a few (Ok, more than 
     1. Delete all the markdown pages from this directory and replace them with your own.
     2. If a main page is needed, it needs to be in a file called `main_page.md`.
 8. Open the folder `include`. Then:
-    1. Change the name of the folder `project-abbr` to something that matches your project (name or abbreviation). Delete all the files _except_ `config.hpp.in` in this directory and replace them with your public include files, if they exist.
+    1. Change the name of the folder `project-abbr` to something that matches your project (name or abbreviation). Delete all the files _except_ `config.h.in` in this directory and replace them with your public include files, if they exist.
 9. Open the folder `src`. Then:
     1. Remove all of the `.c` files in this folder and replace them with your source files and private includes.
 10. Open the folder `test`. Then:
