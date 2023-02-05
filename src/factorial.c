@@ -1,4 +1,6 @@
 #include <Clearning/factorial.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 int factorial(int number)
 {
@@ -8,6 +10,7 @@ int factorial(int number)
     {
         result *= i;
     }
+    FILE *fp = fopen("file.txt", "r");
     
     return result;
 }
