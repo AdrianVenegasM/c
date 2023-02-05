@@ -1,0 +1,34 @@
+name: Coverity Scan
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  coverity:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: vapier/coverity-scan-action@v1
+      with:
+        email: ${{ secrets.COVERITY_SCAN_EMAIL }}
+        token: ${{ secrets.COVERITY_SCAN_TOKEN }}
+name: Coverity
+
+on:
+  push:
+    branches: [master]
+
+    - name: setup
+      run: |
+           sudo apt-get update
+           sudo apt-get install -y libcmocka-dev
+    - uses: actions/checkout@v2
+    - name: Configure
+      run: |
+           cmake -B ${{github.workspace}}/build
+    - uses: vapier/coverity-scan-action@v1
+      with:
+        email: ${{ secrets.COVERITY_SCAN_EMAIL }}
+        token: ${{ secrets.COVERITY_SCAN_TOKEN }}
+        command: make -C ${{github.workspace}}/build
