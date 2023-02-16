@@ -6,6 +6,7 @@ struct Node *new_node(int data){
     struct Node *new_node = (struct Node *)malloc(sizeof(struct Node));
     if (new_node == NULL) {
         assert(0 && "Failed to allocate memory for new node");
+        return NULL;
     }
 
     new_node->data = data;
