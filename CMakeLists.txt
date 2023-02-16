@@ -52,6 +52,7 @@ endif (ENABLE_COVERAGE AND NOT CMAKE_CONFIGURATION_TYPES)
 set(LIBRARY_SOURCES
     src/factorial.c
     src/hello_world.c
+    src/linked_list.c
 )
 
 add_library(Clearning-lib ${LIBRARY_SOURCES}) # A library

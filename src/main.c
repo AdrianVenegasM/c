@@ -1,6 +1,7 @@
 #include <Clearning/config.h>
 #include <Clearning/factorial.h>
 #include <Clearning/hello_world.h>
+#include <Clearning/linked_list.h>
 #include <string.h>
 #include <stdio.h>
 
@@ -19,6 +20,8 @@ int main(int argc, char* argv[])
         printf("%s, %s\n", hello(), world());
         printf("%d\n",generateRandomNumber());
         printf("%d\n", factorial(5));
+
+        struct Node *head = new_node(1);
     }
     return 0;
 }
